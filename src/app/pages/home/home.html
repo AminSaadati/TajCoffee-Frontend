@@ -1,0 +1,68 @@
+
+ 
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-text">
+    <h1>به دنیای قهوه Taj Coffee خوش آمدید!</h1>
+    <p>تجربه‌ای ناب از قهوه واقعی و تازه‌ترین آموزش‌ها را با ما تجربه کنید.</p>
+    <button mat-raised-button color="accent" routerLink="/products">مشاهده محصولات</button>
+  </div>
+  <div class="hero-image">
+    <img src="assets/images/coffee_hero.jpg" alt="Taj Coffee Hero">
+  </div>
+</section>
+
+<!-- Featured Products Section -->
+<section class="products-section">
+  <h2>محصولات محبوب ما</h2>
+  <div class="cards-container">
+    <mat-card *ngFor="let product of products" class="product-card">
+      <div class="image-wrapper">
+        <img mat-card-image [src]="product.image" alt="{{product.name}}">
+        <span *ngIf="product.isNew" class="badge">جدید</span>
+      </div>
+      <mat-card-title>{{product.name}}</mat-card-title>
+      <mat-card-content>
+        <p>قیمت: {{product.price | number}} تومان</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary">افزودن به سبد</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</section>
+
+<!-- Tutorials Section -->
+<section class="tutorials-section">
+  <h2>آموزش‌های ما</h2>
+  <div class="cards-container">
+    <mat-card *ngFor="let tutorial of tutorials" class="tutorial-card">
+      <img *ngIf="tutorial.image" mat-card-image [src]="tutorial.image" alt="{{tutorial.title}}">
+      <mat-card-title>{{tutorial.title}}</mat-card-title>
+      <mat-card-content>
+        <p>{{tutorial.description}}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="accent" routerLink="{{tutorial.link}}">مشاهده آموزش</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="about-section">
+  <mat-card class="about-card">
+    <mat-card-title>درباره Taj Coffee</mat-card-title>
+    <mat-card-content>
+      <p>
+        Taj Coffee از سال 1402 در زمینه فروش و آموزش قهوه فعالیت می‌کند. هدف ما ارائه بهترین قهوه‌های دنیا
+        به همراه تجربه آموزشی حرفه‌ای برای علاقه‌مندان است.
+      </p>
+      <p>تیم ما شامل باریستاهای حرفه‌ای و متخصصان قهوه است که عاشق این حوزه هستند.</p>
+    </mat-card-content>
+  </mat-card>
+</section>
+
+
+

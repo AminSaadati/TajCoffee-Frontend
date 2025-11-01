@@ -1,0 +1,35 @@
+<mat-card class="contact-card">
+  <mat-card-header>
+    <mat-card-title>تماس با ما</mat-card-title>
+    <mat-card-subtitle>ما همیشه آماده پاسخگویی به شما هستیم</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content>
+    <div class="contact-info">
+      <div class="contact-item">
+        <mat-icon class="contact-icon">phone</mat-icon>
+        <span>021-12345678</span>
+      </div>
+      <div class="contact-item">
+        <mat-icon class="contact-icon">email</mat-icon>
+        <span>info@tajcoffee.com</span>
+      </div>
+      <div class="contact-item">
+        <mat-icon class="contact-icon">location_on</mat-icon>
+        <span>تهران، خیابان قهوه، پلاک 123</span>
+      </div>
+    </div>
+
+    <form class="contact-form" #form="ngForm">
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>نام شما</mat-label>
+        <input matInput required name="name" ngModel>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>ایمیل</mat-label>
+        <input matInput type="email" required name="email" ngModel>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>پیام شما</mat-label>

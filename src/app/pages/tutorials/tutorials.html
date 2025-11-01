@@ -1,0 +1,20 @@
+<section class="tutorials-section">
+  <h2>آموزش‌های قهوه</h2>
+
+  <div class="tutorials-grid">
+    <mat-card *ngFor="let tutorial of tutorials" class="tutorial-card">
+      <mat-card-header>
+        <mat-card-title>{{ tutorial.title }}</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image [src]="tutorial.image" alt="{{ tutorial.title }}" *ngIf="tutorial.image">
+      <mat-card-content>
+        <p>{{ tutorial.description }}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="accent" class="view-button">
+          مشاهده آموزش
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</section>

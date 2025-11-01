@@ -1,0 +1,56 @@
+.tutorials-section {
+  text-align: center;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.tutorials-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #3a3a3a;
+  margin-bottom: 1.5rem;
+}
+
+.tutorials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.tutorial-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  direction: rtl; /* راست به چپ */
+}
+
+.tutorial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.tutorial-card img {
+  height: 180px;
+  object-fit: cover;
+}
+
+.tutorial-card mat-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2c2c2c;
+}
+
+.tutorial-card mat-card-content p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4rem;
+  margin: 0.5rem 0;
+}
+
+.view-button {
+  margin: 0 auto;
+  display: block;
+  font-weight: 600;
+}

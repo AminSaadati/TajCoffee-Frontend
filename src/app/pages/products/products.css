@@ -1,0 +1,129 @@
+.products-section {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: linear-gradient(180deg, #fff8f2 0%, #f9f5f1 100%);
+}
+
+.products-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  color: #4a3c31;
+  position: relative;
+}
+
+.products-section h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #ff6f61;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+.products-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.product-card {
+  width: 260px;
+  text-align: right;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover .card-image img {
+  transform: scale(1.05);
+}
+
+.badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #ff6f61;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+.card-content mat-card-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.price {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ff6f61;
+}
+
+.card-actions {
+  padding: 0.75rem 1rem 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.add-btn {
+  border-radius: 2rem;
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+  background: linear-gradient(45deg, #ff6f61, #ff9472);
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.add-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(255, 111, 97, 0.4);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .products-grid {
+    gap: 1.2rem;
+  }
+  .product-card {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .product-card {
+    width: 90%;
+  }
+}

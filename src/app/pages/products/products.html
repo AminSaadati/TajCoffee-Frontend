@@ -1,0 +1,19 @@
+<section class="products-section">
+  <h2>محصولات ما</h2>
+
+  <div class="products-grid">
+    <mat-card *ngFor="let product of products" class="product-card">
+      <div class="card-image">
+        <img mat-card-image [src]="product.image" alt="{{product.name}}" />
+        <span *ngIf="product.isNew" class="badge">جدید</span>
+      </div>
+      <mat-card-content class="card-content">
+        <mat-card-title>{{product.name}}</mat-card-title>
+        <p class="price">{{product.price | number}} تومان</p>
+      </mat-card-content>
+      <mat-card-actions class="card-actions">
+        <button mat-raised-button class="add-btn">افزودن به سبد</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</section>
