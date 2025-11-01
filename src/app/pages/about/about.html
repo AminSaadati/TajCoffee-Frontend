@@ -20,16 +20,26 @@
       </div>
     </div>
 
-    <form class="contact-form" #form="ngForm">
+    <form class="contact-form" #form="ngForm"   >
+      
       <mat-form-field appearance="outline" class="full-width">
         <mat-label>نام شما</mat-label>
-        <input matInput required name="name" ngModel>
+        <input matInput placeholder="نام خود را وارد کنید" required name="name" ngModel>
       </mat-form-field>
 
       <mat-form-field appearance="outline" class="full-width">
         <mat-label>ایمیل</mat-label>
-        <input matInput type="email" required name="email" ngModel>
+        <input matInput placeholder="ایمیل خود را وارد کنید" type="email" required name="email" ngModel>
       </mat-form-field>
 
       <mat-form-field appearance="outline" class="full-width">
         <mat-label>پیام شما</mat-label>
+        <textarea matInput placeholder="پیام خود را بنویسید" rows="5" required name="message" ngModel></textarea>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">
+        ارسال
+      </button>
+    </form>
+  </mat-card-content>
+</mat-card>

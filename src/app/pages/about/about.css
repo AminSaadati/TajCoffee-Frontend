@@ -1,57 +1,111 @@
 .contact-card {
   max-width: 700px;
-  margin: 2rem auto;
-  padding: 1rem;
+  margin: 3rem auto;
+  padding: 2rem;
   direction: rtl;
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  border-radius: 20px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+  background: #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
 }
 
 mat-card-title {
-  font-size: 1.8rem;
-  font-weight: 600;
-  margin-bottom: 0.3rem;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  color: #1a237e; /* رنگ قوی و جذاب */
 }
 
 mat-card-subtitle {
   font-size: 1rem;
-  color: gray;
-  margin-bottom: 1rem;
+  color: #616161;
+  margin-bottom: 2rem;
+  letter-spacing: 0.5px;
 }
 
 .contact-info {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 .contact-item {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  font-size: 1rem;
-  transition: color 0.3s ease;
+  font-size: 1.05rem;
+  color: #424242;
+  transition: color 0.3s ease, transform 0.2s ease;
+  cursor: default;
 }
 
 .contact-item:hover {
-  color: #1976d2; /* رنگ primary */
+  color: #1976d2;
+  transform: translateX(4px);
 }
 
 .contact-icon {
   color: #1976d2;
+  font-size: 1.4rem;
+  transition: transform 0.2s ease;
+}
+
+.contact-item:hover .contact-icon {
+  transform: scale(1.2);
 }
 
 .contact-form .full-width {
   width: 100%;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.contact-form mat-form-field {
+  background: #f9f9f9;
+  border-radius: 12px;
+}
+
+.contact-form mat-form-field.mat-focused .mat-form-field-outline {
+  border-color: #1976d2;
 }
 
 .send-btn {
-  float: left;
-  transition: transform 0.2s ease;
+  display: inline-block;
+  padding: 0.7rem 1.6rem;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 12px;
+  background: #1976d2;
+  color: #fff;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(25, 118, 210, 0.3);
 }
 
 .send-btn:hover {
+  background: #115293;
   transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(25, 118, 210, 0.4);
+}
+
+@media (max-width: 768px) {
+  .contact-card {
+    padding: 1.5rem;
+    margin: 2rem 1rem;
+  }
+  mat-card-title {
+    font-size: 1.6rem;
+  }
+  .contact-item {
+    font-size: 0.95rem;
+  }
+  .send-btn {
+    width: 100%;
+    text-align: center;
+  }
 }

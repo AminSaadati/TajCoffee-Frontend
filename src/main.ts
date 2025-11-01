@@ -1,9 +1,10 @@
 import { bootstrapApplication } from '@angular/platform-browser';
 import { provideRouter } from '@angular/router';
 import { AppComponent } from './app/app';
-import { appRoutes } from './app/app.routes'; 
+import { routes } from './app/app.routes';
+
 import { provideAnimations } from '@angular/platform-browser/animations';
 
 bootstrapApplication(AppComponent, {
-  providers: [provideRouter(appRoutes),  provideAnimations(),]
+  providers: [provideRouter(routes),  provideAnimations(),]
 }).catch(err => console.error(err));

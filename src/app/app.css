@@ -1,9 +1,27 @@
 .sidenav-container {
   height: 100vh;
 }
-.mat-sidenav {
-  width: 250px;
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
 }
+
 .spacer {
   flex: 1 1 auto;
+}
+
+.desktop-nav {
+  display: none;
+}
+
+/* نمایش منو دسکتاپ در صفحه بزرگ */
+@media (min-width: 768px) {
+  .desktop-nav {
+    display: flex;
+    gap: 10px;
+  }
+  button[mat-icon-button] {
+    display: none;
+  }
 }
